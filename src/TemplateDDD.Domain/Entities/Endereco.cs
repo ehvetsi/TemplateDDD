@@ -27,5 +27,6 @@ namespace TemplateDDD.Domain.Entities
         public Guid ClienteId { get; set; }
 
         public virtual Cliente Cliente { get; set; }
+
     }
 }
