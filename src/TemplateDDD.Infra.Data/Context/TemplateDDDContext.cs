@@ -39,7 +39,7 @@ namespace TemplateDDD.Infra.Data.Context
                 .Configure(c => c.HasMaxLength(100));
 
             modelBuilder.Configurations.Add(new ClienteConfig());
-            modelBuilder.Configurations.Add(new EnderencoConfig());
+            modelBuilder.Configurations.Add(new EnderecoConfig());
 
             base.OnModelCreating(modelBuilder);
         }

@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
 using TemplateDDD.Domain.Entities;
 
 namespace TemplateDDD.Infra.Data.EntityConfig
 {
-    public class EnderencoConfig : EntityTypeConfiguration<Endereco>
+    public class EnderecoConfig : EntityTypeConfiguration<Endereco>
     {
-        public EnderencoConfig()
+        public EnderecoConfig()
         {
             HasKey(c => c.EnderecoId);
 
@@ -34,6 +29,7 @@ namespace TemplateDDD.Infra.Data.EntityConfig
             Property(c => c.Complemento)
                 .HasMaxLength(100);
 
+            //caso o endereço pudesse existir sem o cliente, no caso cliente opcional
             //HasOptional(e => e.Cliente)
             //    .WithMany(c => c.Enderecos)
             //    .HasForeignKey(e => e.ClienteId);

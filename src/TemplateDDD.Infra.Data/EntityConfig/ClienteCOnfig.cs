@@ -11,6 +11,9 @@ namespace TemplateDDD.Infra.Data.EntityConfig
         {
             HasKey(c => c.ClienteId);
 
+            //Se for utilizar chave composta
+            //HasKey(c => new { c.ClienteId, c.CPF });
+
             Property(c => c.Nome)
                 .IsRequired()
                 .HasMaxLength(150);
@@ -23,7 +26,7 @@ namespace TemplateDDD.Infra.Data.EntityConfig
                 .IsRequired()
                 .HasMaxLength(11)
                 .IsFixedLength()
-                .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute() { IsUnique = true }));
+                .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("IndiceClienteCpf") { IsUnique = true }));
 
             Property(c => c.DataNascimento)
                 .IsRequired();

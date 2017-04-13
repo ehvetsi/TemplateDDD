@@ -12,7 +12,7 @@ namespace TemplateDDD.Infra.Data.Migrations
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(TemplateDDD.Infra.Data.Context.TemplateDDDContext context)
+        protected override void Seed(Context.TemplateDDDContext context)
         {
             //  This method will be called after migrating to the latest version.
 
