@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D6792F2-CC2C-46B0-80E6-D6371D7AE2E5}</ProjectGuid>
+    <ProjectGuid>{E1662494-D226-4624-B18C-5EA9E2F7B5B1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TemplateDDD.Domain</RootNamespace>
-    <AssemblyName>TemplateDDD.Domain</AssemblyName>
+    <RootNamespace>TemplateDDD.Application</RootNamespace>
+    <AssemblyName>TemplateDDD.Application</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,13 +31,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Cliente.cs" />
-    <Compile Include="Entities\Endereco.cs" />
-    <Compile Include="Interfaces\Repository\IClienteRepository.cs" />
-    <Compile Include="Interfaces\Repository\IRepository.cs" />
+    <Compile Include="Dtos\ClienteDto.cs" />
+    <Compile Include="Dtos\ClienteEnderecoDto.cs" />
+    <Compile Include="Dtos\EnderecoDto.cs" />
+    <Compile Include="Interfaces\IClienteAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TemplateDDD.Domain\TemplateDDD.Domain.csproj">
+      <Project>{2D6792F2-CC2C-46B0-80E6-D6371D7AE2E5}</Project>
+      <Name>TemplateDDD.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
