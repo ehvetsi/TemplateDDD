@@ -12,6 +12,7 @@ namespace TemplateDDD.Application.Dtos
             ClienteId = Guid.NewGuid();
             Enderecos=new List<EnderecoDto>();
         }
+
         [ScaffoldColumn(false)]
         public bool Ativo { get; set; }
 
